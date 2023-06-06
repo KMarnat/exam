@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.66 59.08">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: .25em;
+      }
+
+      .cls-2 {
+        stroke-width: 3px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: none;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-5 {
+        letter-spacing: .27em;
+      }
+
+      .cls-3 {
+        stroke-width: 4px;
+      }
+
+      .cls-4 {
+        fill: #fff;
+        font-family: 'Dune_Rise', 'Dune Rise';
+        font-size: 60px;
+      }
+    </style>
+  </defs>
+  <text class="cls-4" transform="translate(.5 54.5)"><tspan class="cls-1" x="0" y="0">IG</tspan><tspan class="cls-5" x="106.02" y="0">N T</tspan><tspan class="cls-1" x="298.62" y="0">UM</tspan></text>
+  <g>
+    <path class="cls-2" d="m222.03,30.15c0,13.23-10.72,23.95-23.95,23.95-9.92,0-17.96-8.04-17.96-17.96,0-7.44,6.03-13.47,13.47-13.47,5.58,0,10.1,4.52,10.1,10.1,0,4.19-3.39,7.58-7.58,7.58-3.14,0-5.68-2.54-5.68-5.68,0-2.35,1.91-4.26,4.26-4.26,1.77,0,3.2,1.43,3.2,3.2,0,1.32-1.07,2.4-2.4,2.4-.99,0-1.8-.81-1.8-1.8"/>
+    <circle class="cls-3" cx="198.53" cy="31.04" r="23"/>
+  </g>
+</svg>
