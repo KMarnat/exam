@@ -118,50 +118,31 @@ const missionBtn = document.querySelector('.mission-btn');
 const crewBtn = document.querySelector('.crew-btn');
 const knowBtn = document.querySelector('.know-btn');
 
-// selectiong the sections
-const firstSection = document.querySelector('.mission-section');
-const secondSection = document.querySelector('.crew-section');
-const thirdSection = document.querySelector('.know-section');
+// creating a function that takes the section class as a parameter
+function scrollToSection(section) {
+  // using the parameter to get the target section
+  const targetSection = document.querySelector(section);
 
-function scrollFirstSection(e) {
-  // getBoudingClientRect() function gives info about element size and it's position
-  const s1 = firstSection.getBoundingClientRect();
+  // getting the info about the size of the element and its position
+  const sectionRect = targetSection.getBoundingClientRect();
 
+  // scrolls to a specific part of the document using the section coordinates
   window.scrollTo({
-    // Scrolling to first section, even if already scrolled to middle of hero
-    // Top of the 1st section to the top of the viewport + current scroll position
-    left: s1.left + window.scrollX,
-    top: s1.top + window.scrollY,
+    left: sectionRect.left + window.scrollX,
+    top: sectionRect.top + window.scrollY,
     behavior: 'smooth',
   });
 }
 
-function scrollSecondSection(e) {
-  // getBoudingClientRect() function gives info about element size and it's position
-  const s2 = secondSection.getBoundingClientRect();
+// adding click event listeners to the three buttons in the nav
+missionBtn.addEventListener('click', function () {
+  scrollToSection('.mission-section');
+});
 
-  window.scrollTo({
-    // Scrolling to first section, even if already scrolled to middle of hero
-    // Top of the 1st section to the top of the viewport + current scroll position
-    left: s2.left + window.scrollX,
-    top: s2.top + window.scrollY,
-    behavior: 'smooth',
-  });
-}
+crewBtn.addEventListener('click', function () {
+  scrollToSection('.crew-section');
+});
 
-function scrollThirdSection(e) {
-  // getBoudingClientRect() function gives info about element size and it's position
-  const s3 = thirdSection.getBoundingClientRect();
-
-  window.scrollTo({
-    // Scrolling to first section, even if already scrolled to middle of hero
-    // Top of the 1st section to the top of the viewport + current scroll position
-    left: s3.left + window.scrollX,
-    top: s3.top + window.scrollY,
-    behavior: 'smooth',
-  });
-}
-
-missionBtn.addEventListener('click', scrollFirstSection);
-crewBtn.addEventListener('click', scrollSecondSection);
-knowBtn.addEventListener('click', scrollThirdSection);
+knowBtn.addEventListener('click', function () {
+  scrollToSection('.know-section');
+});
