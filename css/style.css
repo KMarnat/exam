@@ -204,7 +204,6 @@ header nav {
   background-image: url('../assets/images/banner-image.png');
   background-size: cover;
   min-height: 100vh;
-  z-index: 3;
 }
 
 .hero-flex {
@@ -457,3 +456,71 @@ footer img {
   margin-bottom: 22px;
 }
 /* MAIN STYLES END*/
+
+@media only screen and (max-width: 428px) {
+  header {
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  header nav {
+    margin: 30px 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .hero {
+    height: 900px;
+    background-position: 98%;
+    background-repeat: no-repeat;
+  }
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .timer h4,
+  .timer p {
+    font-size: 1.4rem;
+  }
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .know-more {
+    flex-direction: column;
+  }
+
+  .know-more img {
+    height: 170px;
+  }
+
+  .section-nr,
+  .section-nr-right {
+    position: static;
+    width: 100px;
+  }
+
+  .section-start {
+    margin-bottom: 0;
+  }
+
+  .orange-line {
+    margin: 8px 0;
+  }
+
+  .section-start h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    text-align: end;
+  }
+
+  .mission-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
