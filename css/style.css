@@ -201,7 +201,7 @@ header nav ul {
 }
 
 .hero {
-  background-image: url('../assets/images/banner-image.png');
+  background-image: url('../assets/images/banner-image-min.png');
   background-size: cover;
   min-height: 100vh;
 }
