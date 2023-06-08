@@ -81,7 +81,7 @@ window.addEventListener('keydown', function (e) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // countdown timer
-const targetDate = new Date('2023-06-10T12:00:00+03:00');
+const targetDate = new Date('2023-06-12T12:00:00+03:00');
 
 function updateCountdown() {
   // calculating the remaining time
