@@ -200,6 +200,10 @@ header nav ul {
   font-family: 'Dune';
 }
 
+nav ul a {
+  padding: 6px 0;
+}
+
 .hero {
   background-image: url('../assets/images/banner-image-min.png');
   background-size: cover;
