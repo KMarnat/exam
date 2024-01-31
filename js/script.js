@@ -1,15 +1,15 @@
-'use strict';
+"use strict";
 
 // importing the data from data.js
-import astronauts from './data.js';
+import astronauts from "./data.js";
 
 // selecting necessary elements
-const cardContainer = document.querySelector('.card-container');
-const modal = document.querySelector('.modal');
-const overlay = document.querySelector('.overlay');
-const btnCloseOverlay = document.querySelector('.close-modal');
+const cardContainer = document.querySelector(".card-container");
+const modal = document.querySelector(".modal");
+const overlay = document.querySelector(".overlay");
+const btnCloseOverlay = document.querySelector(".close-modal");
 
-const countdown = document.getElementById('countdown');
+const countdown = document.getElementById("countdown");
 
 // loops over data.js file, which is an array of objects. Using the key value pairs this forEach function creates the html with the corresponding info and inserts that html into the crew card container
 astronauts.forEach((astronaut) => {
@@ -24,22 +24,22 @@ astronauts.forEach((astronaut) => {
     </article>
   </div>
   `;
-  cardContainer.insertAdjacentHTML('beforeend', html);
+  cardContainer.insertAdjacentHTML("beforeend", html);
 });
 
 // Selecting more, but after previous forEach loop. Classes are created in the forEach function
-const crewCard = document.querySelectorAll('.crew-card');
-const crewName = document.querySelector('.crew-name');
-const crewTitle = document.querySelector('.crew-title');
-const crewBirthdate = document.querySelector('.crew-birthdate');
-const crewEdu = document.querySelector('.crew-edu');
-const crewWork = document.querySelector('.crew-work');
-const crewAbout = document.querySelector('.crew-about');
-const crewImage = document.querySelector('.crew-image');
+const crewCard = document.querySelectorAll(".crew-card");
+const crewName = document.querySelector(".crew-name");
+const crewTitle = document.querySelector(".crew-title");
+const crewBirthdate = document.querySelector(".crew-birthdate");
+const crewEdu = document.querySelector(".crew-edu");
+const crewWork = document.querySelector(".crew-work");
+const crewAbout = document.querySelector(".crew-about");
+const crewImage = document.querySelector(".crew-image");
 
 // Replacing the placeholder info in the modal. Adding a display flex and removing display hidden (if display flex is always on the modal bugs out).
 crewCard.forEach((card, i) =>
-  card.addEventListener('click', function () {
+  card.addEventListener("click", function () {
     if (i === i) {
       crewImage.src = astronauts[i].image;
       crewName.innerHTML = astronauts[i].name;
@@ -48,9 +48,9 @@ crewCard.forEach((card, i) =>
       crewEdu.innerHTML = `Education: ${astronauts[i].education}`;
       crewWork.innerHTML = `Prior work: ${astronauts[i].priorExperience}`;
       crewAbout.innerHTML = astronauts[i].about;
-      modal.classList.remove('hidden');
-      modal.classList.add('flex');
-      overlay.classList.remove('hidden');
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      overlay.classList.remove("hidden");
     }
   })
 );
@@ -59,21 +59,21 @@ crewCard.forEach((card, i) =>
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // adding click event listener to the button (x), which hides it and also hides the overlay
-btnCloseOverlay.addEventListener('click', function () {
-  modal.classList.remove('flex');
-  modal.classList.add('hidden');
-  overlay.classList.add('hidden');
+btnCloseOverlay.addEventListener("click", function () {
+  modal.classList.remove("flex");
+  modal.classList.add("hidden");
+  overlay.classList.add("hidden");
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // added keydown event listener, that listens for 'escape' button press that closes the modal window
-window.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
-    modal.classList.remove('flex');
-    modal.classList.add('hidden');
-    overlay.classList.add('hidden');
+window.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    modal.classList.remove("flex");
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
   }
 });
 
@@ -81,7 +81,7 @@ window.addEventListener('keydown', function (e) {
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // countdown timer
-const targetDate = new Date('2023-07-31T12:00:00+03:00');
+const targetDate = new Date("2024-05-31T12:00:00+03:00");
 
 function updateCountdown() {
   // calculating the remaining time
@@ -95,12 +95,12 @@ function updateCountdown() {
   const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
   // Format the countdown time
-  const formattedTime = `${totalHours.toString().padStart(2, '0')}:${minutes
+  const formattedTime = `${totalHours.toString().padStart(2, "0")}:${minutes
     .toString()
-    .padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")}`;
 
   // Update the countdown display in the <span> element
-  document.getElementById('countdown').textContent = formattedTime;
+  document.getElementById("countdown").textContent = formattedTime;
 }
 
 // update the countdown immediately to avoid delay
@@ -114,9 +114,9 @@ const countdownInterval = setInterval(updateCountdown, 1000);
 
 // adding functionality to nav buttons, that scroll to the corresponding sections
 // selecting the 3 nav buttons
-const missionBtn = document.querySelector('.mission-btn');
-const crewBtn = document.querySelector('.crew-btn');
-const knowBtn = document.querySelector('.know-btn');
+const missionBtn = document.querySelector(".mission-btn");
+const crewBtn = document.querySelector(".crew-btn");
+const knowBtn = document.querySelector(".know-btn");
 
 // creating a function that takes the section class as a parameter
 function scrollToSection(section) {
@@ -130,19 +130,19 @@ function scrollToSection(section) {
   window.scrollTo({
     left: sectionRect.left + window.scrollX,
     top: sectionRect.top + window.scrollY,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 }
 
 // adding click event listeners to the three buttons in the nav
-missionBtn.addEventListener('click', function () {
-  scrollToSection('.mission-section');
+missionBtn.addEventListener("click", function () {
+  scrollToSection(".mission-section");
 });
 
-crewBtn.addEventListener('click', function () {
-  scrollToSection('.crew-section');
+crewBtn.addEventListener("click", function () {
+  scrollToSection(".crew-section");
 });
 
-knowBtn.addEventListener('click', function () {
-  scrollToSection('.know-section');
+knowBtn.addEventListener("click", function () {
+  scrollToSection(".know-section");
 });
